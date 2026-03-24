@@ -28,6 +28,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="349" height="51"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="WK5-iZ-8sK" kind="show" id="xJm-Wm-agb"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -55,6 +58,7 @@
                         <viewLayoutGuide key="safeArea" id="v84-4e-OTf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="IcH-vA-bw1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zrt-fm-mx0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,6 +9,8 @@ import UIKit
 
 class GummyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    
+    
     var gummyArray = ["Sour Patch Kids", "Albanese Gummy Bears", "Trolli Sour Crawlers", "Wild Berry Lifesavers"]
    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -20,18 +22,21 @@ class GummyViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let text = gummyArray[indexPath.row]
         cell.textLabel?.text = text
         return cell
+        
+        //Fix after watching video playback
+        //func tableView(_tableView:UITableView, didSelectRowAt indexPath: IndexPath){
+        // tableView.deselectRow(at: indexPath, animated: true)
     }
     
 
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+    }
     }
     
 
     
 
-}
+
