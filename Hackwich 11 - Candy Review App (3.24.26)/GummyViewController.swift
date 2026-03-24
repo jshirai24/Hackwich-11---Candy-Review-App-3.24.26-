@@ -7,7 +7,21 @@
 
 import UIKit
 
-class GummyViewController: UIViewController {
+class GummyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var gummyArray = ["Sour Patch Kids", "Albanese Gummy Bears", "Trolli Sour Crawlers", "Wild Berry Lifesavers"]
+   
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return gummyArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let text = gummyArray[indexPath.row]
+        cell.textLabel?.text = text
+        return cell
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,14 +30,6 @@ class GummyViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
