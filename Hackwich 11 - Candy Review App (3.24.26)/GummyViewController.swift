@@ -11,23 +11,11 @@ class GummyViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     
     @IBOutlet weak var tableView: UITableView!
-    
-    
-    
+
     var catagoryOneImagesData = [String]()
     
     var gummyArray = ["Sour Patch Kids", "Albanese Gummy Bears", "Trolli Sour Crawlers", "Wild Berry Lifesavers"]
-
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let path = Bundle.main.path(forResource: "Property List", ofType: "plist")
-        let dict = NSDictionary(contentsOfFile: path!)
-        catagoryOneImagesData = dict!.object(forKey: "CatagoryOneImagesData") as! [String]
-        
-    }
-    
+  
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return gummyArray.count
     }
@@ -43,6 +31,17 @@ class GummyViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
+
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let path = Bundle.main.path(forResource: "Property List", ofType: "plist")
+        let dict = NSDictionary(contentsOfFile: path!)
+        catagoryOneImagesData = dict!.object(forKey: "CatagoryOneImagesData") as! [String]
+        
+    }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
@@ -54,11 +53,6 @@ class GummyViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
         }
     }
-    
-    
-    
-    
-    
     
     
     

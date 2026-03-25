@@ -29,7 +29,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="WK5-iZ-8sK" kind="show" identifier="gummySegue" id="xJm-Wm-agb"/>
+                                            <segue destination="WK5-iZ-8sK" kind="show" id="Mo3-N4-4ND"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -103,7 +103,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="PMf-ut-ekf" kind="relationship" relationship="viewControllers" id="bqv-Ia-P1L"/>
-                        <segue destination="2Qg-Ew-Fqy" kind="relationship" relationship="viewControllers" id="ie1-Pr-soG"/>
+                        <segue destination="2Qg-Ew-Fqy" kind="relationship" relationship="viewControllers" id="Gmu-9V-PBp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YzN-zK-6vk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -141,12 +141,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="gLp-6I-eeK" kind="relationship" relationship="rootViewController" id="CKH-Qt-bcC"/>
+                        <segue destination="gLp-6I-eeK" kind="relationship" relationship="rootViewController" id="E13-UD-wp3"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IhC-Id-ZV2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="658.77862595419845" y="656.33802816901414"/>
+            <point key="canvasLocation" x="737" y="604"/>
         </scene>
     </scenes>
     <resources>
