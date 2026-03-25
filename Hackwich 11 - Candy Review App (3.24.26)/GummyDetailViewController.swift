@@ -6,13 +6,21 @@
 //
 
 import UIKit
-
 class GummyDetailViewController: UIViewController {
-
+    
+    
+    
+    @IBOutlet weak var imageView: UIImageView!
+    
+    var imagePass: String?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let imageName = imagePass {
+            imageView.image = UIImage(named: imageName)
+        }
     }
     
 
