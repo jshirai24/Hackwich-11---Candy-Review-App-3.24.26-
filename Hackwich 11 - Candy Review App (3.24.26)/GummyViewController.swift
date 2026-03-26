@@ -38,7 +38,7 @@ class GummyViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         let path = Bundle.main.path(forResource: "Property List", ofType: "plist")
         let dict = NSDictionary(contentsOfFile: path!)
-        catagoryOneImagesData = dict!.object(forKey: "CatagoryOneImagesData") as! [String]
+        catagoryOneImagesData = dict!.object(forKey: "CatagoryOneImages") as! [String]
         
     }
 
