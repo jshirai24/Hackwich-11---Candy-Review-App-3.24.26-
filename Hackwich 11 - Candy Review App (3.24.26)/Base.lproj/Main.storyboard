@@ -51,6 +51,136 @@
             </objects>
             <point key="canvasLocation" x="1585.4961832061067" y="656.33802816901414"/>
         </scene>
+        <!--Choco View Controller-->
+        <scene sceneID="9Gu-HY-lBw">
+            <objects>
+                <viewController id="laj-6g-RXD" customClass="ChocoViewController" customModule="Hackwich_11___Candy_Review_App__3_24_26_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P0W-n9-gLa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MEa-at-lec">
+                                <rect key="frame" x="24" y="172" width="344" height="457"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="nd1-PV-3sC">
+                                        <rect key="frame" x="0.0" y="50" width="344" height="51"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nd1-PV-3sC" id="3z6-12-tzX">
+                                            <rect key="frame" x="0.0" y="0.0" width="344" height="51"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="42A-NC-PgU" kind="show" identifier="chocoSegue" id="iCN-KO-dcd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="laj-6g-RXD" id="tV2-bq-zzv"/>
+                                    <outlet property="delegate" destination="laj-6g-RXD" id="Aey-hf-DFs"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="n1m-1O-RcS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="q3H-UY-f4L"/>
+                    <connections>
+                        <outlet property="chocoTableView" destination="MEa-at-lec" id="aRK-hc-CPJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jxe-Is-R6j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1583.9694656488548" y="1323.943661971831"/>
+        </scene>
+        <!--Hard Candy View Controller-->
+        <scene sceneID="Yju-8c-wpO">
+            <objects>
+                <viewController id="Vgg-LC-zWU" customClass="HardCandyViewController" customModule="Hackwich_11___Candy_Review_App__3_24_26_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KRh-0Z-ip8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uDO-6x-upQ">
+                                <rect key="frame" x="34" y="230" width="324" height="421"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="wT7-it-b7S">
+                                        <rect key="frame" x="0.0" y="50" width="324" height="51"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wT7-it-b7S" id="kgG-8f-QCR">
+                                            <rect key="frame" x="0.0" y="0.0" width="324" height="51"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="E0t-b6-mfv" kind="show" id="R3b-WF-NTt"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Vgg-LC-zWU" id="zbk-87-BQx"/>
+                                    <outlet property="delegate" destination="Vgg-LC-zWU" id="hss-LJ-GcF"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ohz-Qb-lhP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IDU-CN-tRG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fZn-AO-SkN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1585" y="2018"/>
+        </scene>
+        <!--Hard Candy Detail View Controller-->
+        <scene sceneID="JZp-Mq-48F">
+            <objects>
+                <viewController id="E0t-b6-mfv" customClass="HardCandyDetailViewController" customModule="Hackwich_11___Candy_Review_App__3_24_26_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DQp-F4-WHv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8U9-BR-9lC">
+                                <rect key="frame" x="30" y="139" width="330" height="533"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AIi-5A-IUw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="htx-M4-S0m"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vha-nE-9r6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2598" y="2018"/>
+        </scene>
+        <!--Choco Detail View Controller-->
+        <scene sceneID="kX6-IE-Ba4">
+            <objects>
+                <viewController id="42A-NC-PgU" customClass="ChocoDetailViewController" customModule="Hackwich_11___Candy_Review_App__3_24_26_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u7G-uG-v0Q">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lqr-Dc-7u6">
+                                <rect key="frame" x="32" y="200" width="329" height="513"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AaQ-Yf-2xU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="q37-oi-7h0"/>
+                    <connections>
+                        <outlet property="chocoImageView" destination="lqr-Dc-7u6" id="UVh-Kv-iGT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gkP-eV-uW1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2484.7328244274809" y="1323.943661971831"/>
+        </scene>
         <!--Gummy Detail View Controller-->
         <scene sceneID="7eI-Yf-Rbc">
             <objects>
@@ -104,6 +234,8 @@
                     <connections>
                         <segue destination="PMf-ut-ekf" kind="relationship" relationship="viewControllers" id="bqv-Ia-P1L"/>
                         <segue destination="2Qg-Ew-Fqy" kind="relationship" relationship="viewControllers" id="Gmu-9V-PBp"/>
+                        <segue destination="IjS-uD-m3F" kind="relationship" relationship="viewControllers" id="R0Z-YX-l8R"/>
+                        <segue destination="p4Q-Fy-e4L" kind="relationship" relationship="viewControllers" id="TT8-mx-hww"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YzN-zK-6vk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -148,9 +280,49 @@
             </objects>
             <point key="canvasLocation" x="737" y="604"/>
         </scene>
+        <!--Chocolate-->
+        <scene sceneID="pgR-TR-8PC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IjS-uD-m3F" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Chocolate" image="birthday.cake" catalog="system" id="993-JP-LMP"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wpw-Ja-QiG">
+                        <rect key="frame" x="0.0" y="118" width="393" height="54"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="laj-6g-RXD" kind="relationship" relationship="rootViewController" id="Bbf-KX-fAi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eei-MJ-mVw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45" y="1209"/>
+        </scene>
+        <!--Hard Candy-->
+        <scene sceneID="8V7-Rl-GTq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p4Q-Fy-e4L" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Hard Candy" image="smallcircle.filled.circle.fill" catalog="system" id="7Be-wc-Ces"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cDx-fN-nZu">
+                        <rect key="frame" x="0.0" y="118" width="393" height="54"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Vgg-LC-zWU" kind="relationship" relationship="rootViewController" id="CPA-cE-DSP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ul-F5-LVc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-411" y="2018"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="birthday.cake" catalog="system" width="128" height="115"/>
         <image name="house" catalog="system" width="128" height="104"/>
+        <image name="smallcircle.filled.circle.fill" catalog="system" width="128" height="123"/>
         <image name="teddybear" catalog="system" width="122" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

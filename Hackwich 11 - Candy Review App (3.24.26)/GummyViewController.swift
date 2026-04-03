@@ -14,7 +14,7 @@ class GummyViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     var catagoryOneImagesData = [String]()
     
-    var gummyArray = ["Sour Patch Kids", "Albanese Gummy Bears", "Trolli Sour Crawlers", "Wild Berry Lifesavers"]
+    var gummyArray = ["Sour Patch Kids ⭐️⭐️⭐️ ", "Albanese Gummy Bears ⭐️⭐️⭐️⭐️⭐️", "Trolli Sour Crawlers ⭐️⭐️⭐️⭐️", "Wild Berry Lifesavers ⭐️⭐️⭐️⭐️"]
   
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return gummyArray.count
@@ -50,6 +50,8 @@ class GummyViewController: UIViewController, UITableViewDelegate, UITableViewDat
             let s1 = segue.destination as! GummyDetailViewController
             let imageIndex = tableView.indexPathForSelectedRow?.row
             s1.imagePass = catagoryOneImagesData[imageIndex!]
+            
+            
             
         }
     }
