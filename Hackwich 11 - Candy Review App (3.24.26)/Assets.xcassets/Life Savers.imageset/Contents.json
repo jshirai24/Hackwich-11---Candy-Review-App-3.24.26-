@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "Life-Savers-Wild-Berries-Gummy-Candy-7-oz-Bag_72e549a7-132f-4417-b7e9-6672234fb363.954a22aee98591164e56e8153d7f73be.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
