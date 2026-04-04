@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var learnmoreButton: UIButton!
     
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,8 @@ class ViewController: UIViewController {
         homeImageView.image = UIImage(named:"Home Screen")
         
         learnmoreButton.setTitle("Learn More", for:.normal)
+       
+        titleLabel.text = "Featured Candy: Albanese Gummy Bears"
         
     }
     
