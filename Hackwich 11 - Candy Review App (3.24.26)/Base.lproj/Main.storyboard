@@ -103,7 +103,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uDO-6x-upQ">
-                                <rect key="frame" x="34" y="230" width="324" height="421"/>
+                                <rect key="frame" x="34" y="158" width="324" height="551"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -115,7 +115,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="E0t-b6-mfv" kind="show" id="R3b-WF-NTt"/>
+                                            <segue destination="E0t-b6-mfv" kind="show" identifier="HCSegue" id="R3b-WF-NTt"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -129,10 +129,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="IDU-CN-tRG"/>
+                    <connections>
+                        <outlet property="HCTableView" destination="uDO-6x-upQ" id="neJ-rW-kFc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fZn-AO-SkN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1585" y="2018"/>
+            <point key="canvasLocation" x="1583.9694656488548" y="2017.605633802817"/>
         </scene>
         <!--Hard Candy Detail View Controller-->
         <scene sceneID="JZp-Mq-48F">
@@ -151,6 +154,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="htx-M4-S0m"/>
+                    <connections>
+                        <outlet property="HCImageView" destination="8U9-BR-9lC" id="Zqb-Lp-Pdy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vha-nE-9r6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -209,18 +215,85 @@
         <!--View Controller-->
         <scene sceneID="btr-hv-vi5">
             <objects>
-                <viewController id="DgV-cR-3du" sceneMemberID="viewController">
+                <viewController id="DgV-cR-3du" customClass="ViewController" customModule="Hackwich_11___Candy_Review_App__3_24_26_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6wY-ZJ-UdT">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2RK-6e-Gmr">
+                                <rect key="frame" x="25" y="112" width="352" height="593"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8e7-Gv-XBd">
+                                <rect key="frame" x="129" y="592" width="163" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="learnmoreButtonPressed:" destination="DgV-cR-3du" eventType="touchUpInside" id="XfO-yY-rkW"/>
+                                    <segue destination="iat-VM-k06" kind="show" identifier="FeaturedSegue" id="SMa-Xe-TcS"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="FJr-PQ-pqP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2RK-6e-Gmr" firstAttribute="trailing" secondItem="6wY-ZJ-UdT" secondAttribute="trailingMargin" id="32b-QQ-G31"/>
+                            <constraint firstItem="8e7-Gv-XBd" firstAttribute="centerX" secondItem="2RK-6e-Gmr" secondAttribute="centerX" constant="9.5" id="Dhp-bJ-bq9"/>
+                            <constraint firstItem="8e7-Gv-XBd" firstAttribute="leading" secondItem="FJr-PQ-pqP" secondAttribute="leading" constant="129" id="Lgk-PE-hxT"/>
+                            <constraint firstItem="FJr-PQ-pqP" firstAttribute="bottom" secondItem="2RK-6e-Gmr" secondAttribute="bottom" constant="30" id="Xhv-ZA-DT8"/>
+                            <constraint firstItem="8e7-Gv-XBd" firstAttribute="top" secondItem="FJr-PQ-pqP" secondAttribute="top" constant="420" id="aOl-Zx-5O1"/>
+                            <constraint firstItem="2RK-6e-Gmr" firstAttribute="top" secondItem="6wY-ZJ-UdT" secondAttribute="topMargin" constant="-60" id="fr0-9M-Ojm"/>
+                            <constraint firstItem="2RK-6e-Gmr" firstAttribute="leading" secondItem="FJr-PQ-pqP" secondAttribute="leading" constant="25" id="y6W-td-n7G"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ck8-ie-Acj"/>
+                    <connections>
+                        <outlet property="homeImageView" destination="2RK-6e-Gmr" id="CvV-lM-Gaf"/>
+                        <outlet property="learnmoreButton" destination="8e7-Gv-XBd" id="iTt-mx-JK0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wHl-Kl-joe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1585.4961832061067" y="-151.40845070422537"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="m7D-c1-Zas">
+            <objects>
+                <viewController id="iat-VM-k06" customClass="SecondViewController" customModule="Hackwich_11___Candy_Review_App__3_24_26_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AF9-Ve-pIo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nk1-ti-tXh">
+                                <rect key="frame" x="27" y="200" width="339" height="166"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vk3-jx-myP">
+                                <rect key="frame" x="95" y="446" width="224" height="125"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NEA-YR-V38"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NEA-YR-V38" firstAttribute="trailing" secondItem="Vk3-jx-myP" secondAttribute="trailing" constant="74" id="8ja-pS-ELM"/>
+                            <constraint firstItem="Nk1-ti-tXh" firstAttribute="leading" secondItem="NEA-YR-V38" secondAttribute="leading" constant="27" id="MBU-Y8-uTY"/>
+                            <constraint firstItem="NEA-YR-V38" firstAttribute="bottom" secondItem="Vk3-jx-myP" secondAttribute="bottom" constant="164" id="Odc-fK-4Wm"/>
+                            <constraint firstItem="Vk3-jx-myP" firstAttribute="leading" secondItem="NEA-YR-V38" secondAttribute="leading" constant="95" id="azP-FA-aJq"/>
+                            <constraint firstItem="Vk3-jx-myP" firstAttribute="top" secondItem="Nk1-ti-tXh" secondAttribute="bottom" constant="80" id="qNm-FB-EHW"/>
+                            <constraint firstItem="Nk1-ti-tXh" firstAttribute="top" secondItem="NEA-YR-V38" secondAttribute="top" constant="28" id="r4x-51-W6x"/>
+                            <constraint firstItem="Nk1-ti-tXh" firstAttribute="centerX" secondItem="AF9-Ve-pIo" secondAttribute="centerX" id="vuQ-oU-9lk"/>
+                            <constraint firstItem="NEA-YR-V38" firstAttribute="bottom" secondItem="Nk1-ti-tXh" secondAttribute="bottom" constant="369" id="xKd-Uy-1WZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YEd-Zq-mZT"/>
+                    <connections>
+                        <outlet property="featuredcandyImage" destination="Nk1-ti-tXh" id="qEO-hf-ILB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jlD-x7-tlQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2484.7328244274809" y="-151.40845070422537"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cex-15-il0">

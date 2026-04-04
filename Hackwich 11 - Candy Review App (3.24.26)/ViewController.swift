@@ -8,12 +8,36 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var homeImageView: UIImageView!
+    
+    
+    @IBOutlet weak var learnmoreButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        homeImageView.image = UIImage(named:"Home Screen")
+        
+        learnmoreButton.setTitle("Learn More", for:.normal)
+        
     }
-
-
+    
+    
+    @IBAction func learnmoreButtonPressed(_ sender: Any) {
+        
+        func prepare(for segue: UIStoryboardSegue, sender: Any?)
+        {
+            if segue.identifier == "FeaturedSegue"
+            {
+                let s1 = segue.destination as! SecondViewController
+                
+            }
+            
+            
+        }
+    }
+    
 }
-

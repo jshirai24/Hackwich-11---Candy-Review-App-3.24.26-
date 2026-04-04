@@ -7,23 +7,49 @@
 
 import UIKit
 
-class HardCandyViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+class HardCandyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    
+    @IBOutlet weak var HCTableView: UITableView!
+    
+    var CatagoryThreeImagesData = [String]()
+    
+    var hardcandyArray = ["Nerds ⭐️⭐️⭐️", "Skittles ⭐️⭐️", "Smarties ⭐️⭐️⭐️⭐️", "Sweet Tarts ⭐️⭐️⭐️⭐️⭐️"]
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return hardcandyArray.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let text = hardcandyArray[indexPath.row]
+        cell.textLabel?.text = text
+        return cell
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let path = Bundle.main.path(forResource: "HCProperty List", ofType: "plist")
+        let dict = NSDictionary(contentsOfFile: path!)
+        CatagoryThreeImagesData = dict!.object(forKey: "CatagoryThreeImages") as! [String]
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "HCSegue"
+        {
+            let s1 = segue.destination as! HardCandyDetailViewController
+            let imageIndex = HCTableView.indexPathForSelectedRow?.row
+            s1.imagePass = CatagoryThreeImagesData[imageIndex!]
+            
+        }
+        
+        
+    }
 }
