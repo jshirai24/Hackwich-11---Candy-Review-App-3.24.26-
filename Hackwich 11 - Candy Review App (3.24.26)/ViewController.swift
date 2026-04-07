@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         {
             if segue.identifier == "FeaturedSegue"
             {
-                let s1 = segue.destination as! SecondViewController
+                _ = segue.destination as! SecondViewController
                 
             }
             
